@@ -1,5 +1,6 @@
 name: Build package
 on:
+  workflow_dispatch: on
   push:
     branches: [ "main" ]
 
