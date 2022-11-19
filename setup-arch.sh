@@ -17,6 +17,7 @@ sudo arch-chroot /mnt/arch /usr/bin/pacman-key --init
 sudo arch-chroot /mnt/arch /usr/bin/pacman-key --populate archlinux
 sudo su - root -c "echo 'Server = https://geo.mirror.pkgbuild.com/\$repo/os/\$arch' > /mnt/arch/etc/pacman.d/mirrorlist"
 sudo su - root -c "echo 'arch ALL=(ALL) NOPASSWD: ALL' > /mnt/arch/etc/sudoers"
+sudo sed -i 's/CheckSpace/\#CheckSpace/g' /mnt/arch/etc/pacman.conf
 sudo arch-chroot /mnt/arch /usr/bin/pacman -Syu --noconfirm
 sudo arch-chroot /mnt/arch /usr/bin/pacman -S base-devel git --noconfirm
 sudo cp build-packages.sh /mnt/arch/home/arch/
