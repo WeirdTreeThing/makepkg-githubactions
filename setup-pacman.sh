@@ -8,3 +8,4 @@ curl -LO http://mirrors.kernel.org/ubuntu/pool/universe/a/archlinux-keyring/arch
 curl -LO http://mirrors.kernel.org/ubuntu/pool/universe/p/pacman-package-manager/pacman-package-manager_6.0.1-4_amd64.deb
 curl -LO http://mirrors.kernel.org/ubuntu/pool/universe/p/pacman-package-manager/makepkg_6.0.1-4_amd64.deb
 apt install -y ./*.deb
+apt install libarchive-tools
